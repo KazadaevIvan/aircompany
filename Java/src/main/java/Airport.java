@@ -27,11 +27,11 @@ public class Airport {
         for (AbstractPlane plane : planes) {
             if (plane instanceof MilitaryPlane) {
                 militaryPlanes.add((MilitaryPlane) plane);
-            } //if
+            }
             else {
 
-            } // else
-        } //for
+            }
+        }
         return militaryPlanes;
     }
 
@@ -95,11 +95,6 @@ public class Airport {
         });
     }
 
-
-    /**
-     * Sorts by max speed
-     * @return Airport
-     */
     public void sortPlanesByMaxSpeed() {
         Collections.sort(planes, new Comparator<AbstractPlane>() {
             public int compare(AbstractPlane o1, AbstractPlane o2) {

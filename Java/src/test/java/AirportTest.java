@@ -86,7 +86,6 @@ public class AirportTest {
                 Assert.fail("Test failed!");
             }
         }
-        // if not failed
     }
 
     @Test
