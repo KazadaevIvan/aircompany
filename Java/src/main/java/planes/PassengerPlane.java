@@ -1,8 +1,8 @@
-package Planes;
+package planes;
 
 import java.util.Objects;
 
-public class PassengerPlane extends Plane{
+public class PassengerPlane extends AbstractPlane {
 
     //=================FIELDS=================
     private int passengersCapacity;
