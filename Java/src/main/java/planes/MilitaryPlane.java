@@ -19,7 +19,9 @@ public class MilitaryPlane extends AbstractPlane {
 
     @Override
     public String toString() {
-        return super.toString().replace("}",
+        return super.toString()
+                .replace("Plane", "MilitaryPLane")
+                .replace("}",
                 ", type=" + militaryPlaneType +
                 '}');
     }
@@ -27,7 +29,7 @@ public class MilitaryPlane extends AbstractPlane {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof MilitaryPlane)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         MilitaryPlane that = (MilitaryPlane) o;
         return militaryPlaneType == that.militaryPlaneType;

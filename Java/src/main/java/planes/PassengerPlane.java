@@ -17,7 +17,9 @@ public class PassengerPlane extends AbstractPlane {
 
     @Override
     public String toString() {
-        return super.toString().replace("}",
+        return super.toString()
+                .replace("Plane", "PassengerPlane")
+                .replace("}",
                 ", passengersCapacity=" + passengersCapacity +
                 '}');
     }
@@ -25,10 +27,10 @@ public class PassengerPlane extends AbstractPlane {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PassengerPlane)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        PassengerPlane plane = (PassengerPlane) o;
-        return passengersCapacity == plane.passengersCapacity;
+        PassengerPlane that = (PassengerPlane) o;
+        return passengersCapacity == that.passengersCapacity;
     }
 
     @Override
