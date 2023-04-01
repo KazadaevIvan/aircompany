@@ -1,20 +1,19 @@
-import org.testng.annotations.BeforeClass;
-import planes.ExperimentalPlane;
 import models.ExperimentalPlaneSecrecyLevel;
 import models.ExperimentalPlaneType;
 import models.MilitaryPlaneType;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import planes.AbstractPlane;
+import planes.ExperimentalPlane;
 import planes.MilitaryPlane;
 import planes.PassengerPlane;
-import planes.AbstractPlane;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class AirportTest {
 
-    private Airport airport;
     private final static List<AbstractPlane> planes = Arrays.asList(
             new PassengerPlane("Boeing-737", 900, 12000, 60500, 164),
             new PassengerPlane("Boeing-737-800", 940, 12300, 63870, 192),
@@ -35,8 +34,8 @@ public class AirportTest {
             new ExperimentalPlane("Ryan X-13 Vertijet", 560, 307, 500, ExperimentalPlaneType.VTOL
                     , ExperimentalPlaneSecrecyLevel.TOP_SECRET)
     );
-
     private final static PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
+    private Airport airport;
 
     @BeforeClass
     public void initAirport() {

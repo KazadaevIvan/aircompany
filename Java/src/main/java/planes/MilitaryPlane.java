@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class MilitaryPlane extends AbstractPlane {
 
-    private MilitaryPlaneType militaryPlaneType;
+    private final MilitaryPlaneType militaryPlaneType;
 
     public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryPlaneType militaryPlaneType) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
@@ -22,8 +22,8 @@ public class MilitaryPlane extends AbstractPlane {
         return super.toString()
                 .replace("Plane", "MilitaryPLane")
                 .replace("}",
-                ", type=" + militaryPlaneType +
-                '}');
+                        ", type=" + militaryPlaneType +
+                                '}');
     }
 
     @Override

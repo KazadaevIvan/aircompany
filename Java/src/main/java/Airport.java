@@ -1,10 +1,11 @@
-import planes.ExperimentalPlane;
 import models.MilitaryPlaneType;
+import planes.AbstractPlane;
+import planes.ExperimentalPlane;
 import planes.MilitaryPlane;
 import planes.PassengerPlane;
-import planes.AbstractPlane;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 // version: 1.1
@@ -12,7 +13,7 @@ import java.util.stream.Collectors;
 // 4-Jan-2019
 
 public class Airport {
-    private List<? extends AbstractPlane> planes;
+    private final List<? extends AbstractPlane> planes;
 
     public Airport(List<? extends AbstractPlane> planes) {
         this.planes = planes;

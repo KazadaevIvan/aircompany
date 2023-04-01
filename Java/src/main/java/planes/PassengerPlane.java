@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class PassengerPlane extends AbstractPlane {
 
-    private int passengersCapacity;
+    private final int passengersCapacity;
 
     public PassengerPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, int passengersCapacity) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
@@ -20,8 +20,8 @@ public class PassengerPlane extends AbstractPlane {
         return super.toString()
                 .replace("Plane", "PassengerPlane")
                 .replace("}",
-                ", passengersCapacity=" + passengersCapacity +
-                '}');
+                        ", passengersCapacity=" + passengersCapacity +
+                                '}');
     }
 
     @Override

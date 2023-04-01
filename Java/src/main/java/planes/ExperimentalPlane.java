@@ -7,8 +7,8 @@ import java.util.Objects;
 
 public class ExperimentalPlane extends AbstractPlane {
 
-    private ExperimentalPlaneType experimentalPlaneType;
-    private ExperimentalPlaneSecrecyLevel classificationLevel;
+    private final ExperimentalPlaneType experimentalPlaneType;
+    private final ExperimentalPlaneSecrecyLevel classificationLevel;
 
     public ExperimentalPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, ExperimentalPlaneType experimentalPlaneType, ExperimentalPlaneSecrecyLevel classificationLevel) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
@@ -16,7 +16,7 @@ public class ExperimentalPlane extends AbstractPlane {
         this.classificationLevel = classificationLevel;
     }
 
-    public ExperimentalPlaneSecrecyLevel getClassificationLevel(){
+    public ExperimentalPlaneSecrecyLevel getClassificationLevel() {
         return classificationLevel;
     }
 
@@ -40,9 +40,9 @@ public class ExperimentalPlane extends AbstractPlane {
         return super.toString()
                 .replace("Plane", "ExperimentalPlane")
                 .replace("}",
-                "ExperimentalPlane{" +
-                "type=" + experimentalPlaneType +
-                ", classificationLevel=" + classificationLevel +
-                '}');
+                        "ExperimentalPlane{" +
+                                "type=" + experimentalPlaneType +
+                                ", classificationLevel=" + classificationLevel +
+                                '}');
     }
 }
